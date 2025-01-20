@@ -28,7 +28,7 @@ $(LIBMLX_DIR)/$(LIBMLX):
 	make -C $(LIBMLX_DIR)
 
 $(NAME): $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) $(addprefix $(OBJ_DIR)/, $(OBJ))
-	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) -o $(NAME)
+	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) -L./lib/mlx_linux -L/usr/lib -lXext -lX11 -lm -lz -o $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)
