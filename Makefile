@@ -12,6 +12,9 @@ OBJ= $(SRC:.c=.o)
 LIBFT_PRINTF_DIR= ./lib/ft_printf
 LIBFT_PRINTF= libftprintf.a
 
+LIBMLX_DIR= ./lib/mlx_linux
+LIBMLX= libmlx.a
+
 all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
@@ -21,11 +24,16 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF):
 	make -C $(LIBFT_PRINTF_DIR)
 
-$(NAME): $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(addprefix $(OBJ_DIR)/, $(OBJ))
-	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) -o $(NAME)
+$(LIBMLX_DIR)/$(LIBMLX):
+	make -C $(LIBMLX_DIR)
+
+$(NAME): $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) $(addprefix $(OBJ_DIR)/, $(OBJ))
+	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) -o $(NAME)
+
 clean:
 	rm -rf $(OBJ_DIR)
 	make clean -C $(LIBFT_PRINTF_DIR)
+	make clean -C $(LIBMLX_DIR)
 
 fclean: clean
 	rm -rf $(NAME)
