@@ -4,7 +4,9 @@ FLAGS= -Wall -Wextra -Werror
 INCLUDE= ./include
 
 SRC_DIR=./src
-SRC= main.c
+SRC= main.c \
+	error/put_error.c \
+	validator/map_validator.c
 
 OBJ_DIR= ./obj
 OBJ= $(SRC:.c=.o)
@@ -19,6 +21,7 @@ all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)/error $(OBJ_DIR)/validator
 	$(CC) $(FLAGS) -I $(INCLUDE) -o $@ -c $<
 
 $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF):
