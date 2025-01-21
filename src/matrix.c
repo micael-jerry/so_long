@@ -14,13 +14,13 @@
 
 char	**matrix_char_join(char **matrix, char *new)
 {
-	char **res;
-	int i;
-	char *end_line;
-	
+	char	**res;
+	int		i;
+	char	*end_line;
 
 	i = 0;
-	res = (char **) malloc((ft_matrixsize((void **)matrix) + 1) * sizeof(char *) + 1);
+	res = (char **)malloc((ft_matrixsize((void **)matrix) + 1) * sizeof(char *)
+			+ 1);
 	if (!res)
 		return (NULL);
 	if (matrix)

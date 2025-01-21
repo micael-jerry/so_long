@@ -48,8 +48,8 @@ static char	*get_global_tmp(char *global_tmp)
 		i++;
 	if (global_tmp[i] == '\0')
 		return (free(global_tmp), NULL);
-	new_global_tmp = (char *)malloc(sizeof(char) * (ft_strlen_gnl(global_tmp) - i
-				+ 1));
+	new_global_tmp = (char *)malloc(sizeof(char) * (ft_strlen_gnl(global_tmp)
+				- i + 1));
 	if (!new_global_tmp)
 		return (NULL);
 	i++;

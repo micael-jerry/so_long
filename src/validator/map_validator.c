@@ -14,7 +14,7 @@
 
 static int	is_valid_map_file_name(const char *map_file_name)
 {
-	size_t len;
+	size_t	len;
 
 	len = ft_strlen(map_file_name);
 	if (len < 5)
