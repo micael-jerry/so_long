@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 21:09:48 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 22:08:00 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	put_error(char *msg);
 
 // MAP
 void	map_arg_validator(int argc, char const *argv[]);
-char 	**get_map_data(int fd);
+char 	**get_matrix_map(int fd);
 
 // MATRIX
 char	**matrix_char_join(char **matrix, char *new);

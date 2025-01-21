@@ -6,13 +6,13 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:47:31 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 21:07:44 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 22:08:00 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	**get_map_data(int fd)
+char	**get_matrix_map(int fd)
 {
 	char	**data;
 	char	*line;

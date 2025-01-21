@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 21:37:41 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 22:08:00 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char const *argv[])
 
 	map_arg_validator(argc, argv);
 	fd = get_fd_map(argv[1]);
-	data = get_map_data(fd);
+	data = get_matrix_map(fd);
 	print_matrix(data);
 	return (0);
 }
