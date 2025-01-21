@@ -6,14 +6,13 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/20 16:20:34 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 05:20:17 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int main()
+int main(void)
 {
-	ft_printf("so_long");
 	return 0;
 }
