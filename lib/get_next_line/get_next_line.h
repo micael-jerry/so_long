@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 14:16:34 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/22 14:16:13 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/04/12 21:15:21 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-#define SO_LONG_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-#include "../lib/mlx_linux/mlx.h"
-#include "../lib/ft_printf/include/ft_printf.h"
-#include "../lib/get_next_line/get_next_line.h"
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
-// ERROR
-void	put_error(char *msg);
-
-// VALIDATOR
-void	map_arg_validator(int argc, char const *argv[]);
+size_t	ft_strlen(char const *str);
+char	*ft_strchr(char const *str, int c);
+char	*ft_strdup(char const *src);
+void	*ft_calloc(size_t count, size_t size);
+char	*strjoin_free(char *s1, const char *s2);
+char	*get_next_line(int fd);
 
 #endif

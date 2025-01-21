@@ -17,6 +17,9 @@ LIBFT_PRINTF= libftprintf.a
 LIBMLX_DIR= ./lib/mlx_linux
 LIBMLX= libmlx.a
 
+LIBGNL_DIR= ./lib/get_next_line
+LIBGNL= get_next_line.a
+
 all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
@@ -30,17 +33,22 @@ $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF):
 $(LIBMLX_DIR)/$(LIBMLX):
 	make -C $(LIBMLX_DIR)
 
-$(NAME): $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) $(addprefix $(OBJ_DIR)/, $(OBJ))
-	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) -L./lib/mlx_linux -L/usr/lib -lXext -lX11 -lm -lz -o $(NAME)
+$(LIBGNL_DIR)/$(LIBGNL):
+	make -C $(LIBGNL_DIR)
+
+$(NAME): $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) $(LIBGNL_DIR)/$(LIBGNL) $(addprefix $(OBJ_DIR)/, $(OBJ))
+	$(CC) $(FLAGS) $(addprefix $(OBJ_DIR)/, $(OBJ)) $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF) $(LIBMLX_DIR)/$(LIBMLX) $(LIBGNL_DIR)/$(LIBGNL) -L./lib/mlx_linux -L/usr/lib -lXext -lX11 -lm -lz -o $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)
 	make clean -C $(LIBFT_PRINTF_DIR)
 	make clean -C $(LIBMLX_DIR)
+	make clean -C $(LIBGNL_DIR)
 
 fclean: clean
 	rm -rf $(NAME)
 	make fclean -C $(LIBFT_PRINTF_DIR)
+	make fclean -C $(LIBGNL_DIR)
 
 re: fclean all
 
