@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 14:16:34 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 21:09:48 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,25 @@
 #include "../lib/ft_printf/include/ft_printf.h"
 #include "../lib/get_next_line/get_next_line.h"
 
+typedef struct s_map_data
+{
+	char **data;
+	int width;
+	int length;
+} t_map_data;
+
 // ERROR
 void	put_error(char *msg);
 
-// VALIDATOR
+// MAP
 void	map_arg_validator(int argc, char const *argv[]);
+char 	**get_map_data(int fd);
+
+// MATRIX
+char	**matrix_char_join(char **matrix, char *new);
+
+// TEST
+void	print_matrix(char **matrix);
+void    print_arr(int *arr);
 
 #endif

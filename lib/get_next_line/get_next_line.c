@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 19:12:22 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/04/12 17:33:31 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 19:20:41 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*get_global_tmp(char *global_tmp)
 		i++;
 	if (global_tmp[i] == '\0')
 		return (free(global_tmp), NULL);
-	new_global_tmp = (char *)malloc(sizeof(char) * (ft_strlen(global_tmp) - i
+	new_global_tmp = (char *)malloc(sizeof(char) * (ft_strlen_gnl(global_tmp) - i
 				+ 1));
 	if (!new_global_tmp)
 		return (NULL);
@@ -84,7 +84,7 @@ char	*get_next_line(int fd)
 			return (free(buffer), NULL);
 		buffer[bytes_readed] = '\0';
 		global_tmp = strjoin_free(global_tmp, buffer);
-		if (ft_strchr(global_tmp, '\n'))
+		if (ft_strchr_gnl(global_tmp, '\n'))
 			break ;
 	}
 	line = get_line(global_tmp);

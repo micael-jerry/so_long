@@ -6,13 +6,13 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:17:19 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/04/12 16:58:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 19:21:13 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen_gnl(const char *str)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr_gnl(const char *str, int c)
 {
 	size_t	i;
 	size_t	len;
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *str, int c)
 	if (!str)
 		return (NULL);
 	i = 0;
-	len = ft_strlen(str);
+	len = ft_strlen_gnl(str);
 	while (i <= len)
 	{
 		if ((int)str[i] == c)
@@ -40,7 +40,7 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc_gnl(size_t count, size_t size)
 {
 	void	*mem;
 	size_t	i;
@@ -57,13 +57,13 @@ void	*ft_calloc(size_t count, size_t size)
 	return (mem);
 }
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup_gnl(const char *src)
 {
 	size_t	len;
 	char	*dest;
 	size_t	i;
 
-	len = ft_strlen(src);
+	len = ft_strlen_gnl(src);
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
@@ -84,8 +84,8 @@ char	*strjoin_free(char *s1, char const *s2)
 	int		j;
 
 	if (!s1)
-		s1 = ft_strdup("");
-	str = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+		s1 = ft_strdup_gnl("");
+	str = (char *)ft_calloc_gnl(ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1, sizeof(char));
 	if (!str)
 		return (free(s1), NULL);
 	i = 0;

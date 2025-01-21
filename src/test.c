@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/21 21:15:43 by mfidimal         ###   ########.fr       */
+/*   Created: 2025/01/21 19:03:14 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/01/21 21:22:23 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int get_fd_map(char const *filename)
+void	print_matrix(char **matrix)
 {
-	int fd;
+    size_t	i;
+    size_t  j;
 
-	fd = open(filename, O_RDONLY);
-	if (fd < 0)
-		put_error("Error on read file");
-	return (fd);
+	i = 0;
+    while (i < ft_matrixsize((void **)matrix)) {
+        j = 0;
+        while (j < ft_strlen(matrix[i])) {
+            ft_printf("%c", matrix[i][j]);
+            j++;
+        }
+        i++;
+        ft_printf("\n");
+    }
 }
 
-int main(int argc, char const *argv[])
+void    print_arr(int *arr)
 {
-	int fd;
-	char **data;
+    size_t i;
 
-	map_arg_validator(argc, argv);
-	fd = get_fd_map(argv[1]);
-	data = get_map_data(fd);
-	print_matrix(data);
-	return 0;
+    i = 0;
+    while (arr[i])
+    {
+        ft_printf("%d ", arr[i]);
+        i++;
+    }
 }

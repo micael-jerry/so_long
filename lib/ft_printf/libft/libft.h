@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/19 15:49:06 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:39:02 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,8 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-// PERSO
-size_t				ft_arrsize(void **arr);
-void				ft_arrfree(void **arr);
+// MATRIX
+size_t				ft_matrixsize(void **arr);
+void				ft_matrixfree(void **arr);
 
 #endif

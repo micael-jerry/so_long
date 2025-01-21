@@ -6,7 +6,9 @@ INCLUDE= ./include
 SRC_DIR=./src
 SRC= main.c \
 	error/put_error.c \
-	validator/map_validator.c
+	validator/map_validator.c \
+	matrix.c map.c \
+	test.c
 
 OBJ_DIR= ./obj
 OBJ= $(SRC:.c=.o)
