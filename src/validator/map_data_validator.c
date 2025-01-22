@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 09:21:34 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 09:53:40 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 10:44:39 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static int is_same_len(t_map_data *map_data)
 
 void	map_data_validator(t_map_data *map_data)
 {
+	if (!map_data->data)
+		return (free(map_data), put_error("Empty"));
 	if (!is_rectangle(map_data))
 		return (free(map_data), put_error("The map is not rectangular"));
 	if (!is_same_len(map_data))

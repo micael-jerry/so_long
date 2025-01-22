@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:47:31 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 09:43:04 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 10:42:28 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	**get_matrix_map(int fd)
 
 	data = NULL;
 	line = get_next_line(fd);
+	if (!line)
+		return (NULL);
 	while (line)
 	{
 		data = matrix_char_join(data, line);
