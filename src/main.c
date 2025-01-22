@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 11:25:16 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:07:28 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static t_map_data *get_map_data(int fd)
 {
 	t_map_data	*map_data;
 
-	map_data = (t_map_data *) malloc(sizeof(t_map_data *));
+	map_data = (t_map_data *) malloc(sizeof(t_map_data));
 	map_data->data = get_matrix_map(fd);
 	if (map_data->data)
 	{
