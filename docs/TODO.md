@@ -2,7 +2,7 @@
 
 ## Liste de contrôle de la carte
 
-- Analyser la carte Lors de l'analyse de la carte, vous pouvez déjà vérifier certaines erreurs, avant même d'aller plus loin
+- ✅ Analyser la carte Lors de l'analyse de la carte, vous pouvez déjà vérifier certaines erreurs, avant même d'aller plus loin
   - ✅ Le fichier map existe-t-il ?
   - ✅ La carte est-elle rectangulaire ?
   - ✅ Toutes les lignes doivent avoir la même longueur.
