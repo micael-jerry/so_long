@@ -4,8 +4,8 @@
 
 - Analyser la carte Lors de l'analyse de la carte, vous pouvez déjà vérifier certaines erreurs, avant même d'aller plus loin
   - ✅ Le fichier map existe-t-il ?
-  - La carte est-elle rectangulaire ?
-  - Toutes les lignes doivent avoir la même longueur.
+  - ✅ La carte est-elle rectangulaire ?
+  - ✅ Toutes les lignes doivent avoir la même longueur.
   - Y a-t-il quelque chose dans le fichier map ?
   - La carte est-elle enfermée dans des murs ?
     - Vérifiez les première et dernière lignes et colonnes, elles doivent toutes être `1`

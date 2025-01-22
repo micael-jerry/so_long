@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 09:21:34 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 09:44:13 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 09:53:40 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,24 @@ static int is_rectangle(t_map_data *map_data)
 	return (1);
 }
 
+static int is_same_len(t_map_data *map_data)
+{
+	int i;
+
+	i = 0;
+	while (i < map_data->heigth)
+	{
+		if ((int) ft_strlen(map_data->data[i]) != map_data->width)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 void	map_data_validator(t_map_data *map_data)
 {
 	if (!is_rectangle(map_data))
 		return (free(map_data), put_error("The map is not rectangular"));
+	if (!is_same_len(map_data))
+		return (free(map_data), put_error("Some line have not same length"));
 }
