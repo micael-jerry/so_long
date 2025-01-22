@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 12:10:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 15:59:34 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int	main(int argc, char const *argv[])
 	map_data_validator(map_data);
 
 	print_matrix(map_data->data);
-	return (0);
+	
+	return (free_map_data(map_data), 0);
 }
