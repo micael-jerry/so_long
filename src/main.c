@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 10:53:31 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:25:16 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static t_map_data *get_map_data(int fd)
 		map_data->width = ft_strlen(map_data->data[0]);
 		return (map_data);
 	}
-	return (free(map_data), put_error("Empty file"), NULL);
+	return (free_map_data(map_data), put_error("Empty file"), NULL);
 }
 
 int	main(int argc, char const *argv[])
