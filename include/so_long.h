@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 11:22:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/22 16:06:57 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,14 @@ typedef struct s_map_data
 	int heigth;
 } t_map_data;
 
+// MAP
+char 	**get_matrix_map(int fd);
+void	map_arg_validator(int argc, char const *argv[]);
+void	map_data_validator(t_map_data *map_data);
+void	map_content_validator(t_map_data *map_data);
+
 // ERROR
 void	put_error(char *msg);
-
-// MAP
-void	map_arg_validator(int argc, char const *argv[]);
-char 	**get_matrix_map(int fd);
-void	map_data_validator(t_map_data *map_data);
 
 // UTILS
 void	free_map_data(t_map_data *map_data);
