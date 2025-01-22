@@ -12,21 +12,21 @@
 
 #include "so_long.h"
 
-static int is_rectangle(t_map_data *map_data)
+static int	is_rectangle(t_map_data *map_data)
 {
 	if (map_data->heigth >= map_data->width)
 		return (0);
 	return (1);
 }
 
-static int is_same_len(t_map_data *map_data)
+static int	is_same_len(t_map_data *map_data)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < map_data->heigth)
 	{
-		if ((int) ft_strlen(map_data->data[i]) != map_data->width)
+		if ((int)ft_strlen(map_data->data[i]) != map_data->width)
 			return (0);
 		i++;
 	}
@@ -38,7 +38,9 @@ void	map_data_validator(t_map_data *map_data)
 	if (!map_data->data)
 		return (free_map_data(map_data), put_error("Empty"));
 	if (!is_rectangle(map_data))
-		return (free_map_data(map_data), put_error("The map is not rectangular"));
+		return (free_map_data(map_data),
+			put_error("The map is not rectangular"));
 	if (!is_same_len(map_data))
-		return (free_map_data(map_data), put_error("Some line have not same length"));
+		return (free_map_data(map_data),
+			put_error("Some line have not same length"));
 }

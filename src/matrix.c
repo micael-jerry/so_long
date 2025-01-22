@@ -19,7 +19,8 @@ char	**matrix_char_join(char **matrix, char *new)
 	char	*end_line;
 
 	i = 0;
-	res = (char **)malloc((ft_matrixsize((void **)matrix) + 2) * sizeof(char *));
+	res = (char **)malloc((ft_matrixsize((void **)matrix) + 2)
+			* sizeof(char *));
 	if (!res)
 		return (NULL);
 	if (matrix)
