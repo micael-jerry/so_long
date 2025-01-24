@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 17:03:53 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:30:38 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int			count_map_obj(t_map_data *map_data, char obj);
 
 // MATRIX
 char		**matrix_char_join(char **matrix, char *new);
+char		**matrix_cpy(char **matrix);
 
 // TEST
 void		print_matrix(char **matrix);

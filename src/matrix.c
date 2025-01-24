@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:23:54 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 11:54:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:34:14 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,24 @@ char	**matrix_char_join(char **matrix, char *new)
 	i++;
 	res[i] = NULL;
 	return (res);
+}
+
+char	**matrix_cpy(char **matrix)
+{
+		int i;
+		char **m_cpy;
+		int matrix_len;
+
+		matrix_len = ft_matrixsize((void **) matrix);
+		m_cpy = (char **) malloc(matrix_len * sizeof(char *));
+		if (!m_cpy)
+			return NULL;
+		i = 0;
+		
+		while (i < matrix_len)
+		{
+			m_cpy[i] = ft_strdup(matrix[i]);
+			i++;
+		}
+		return (m_cpy);
 }
