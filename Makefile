@@ -6,8 +6,8 @@ INCLUDE= ./include
 SRC_DIR=./src
 SRC= main.c \
 	error/put_error.c \
-	validator/map_arg_validator.c validator/map_data_validator.c validator/map_content_validator.c \
-	utils/map_util.c \
+	validator/map_arg_validator.c validator/map_data_validator.c validator/map_content_validator.c validator/map_accessibility_check.c \
+	utils/map_util.c utils/map_access_validator_util.c \
 	matrix.c map.c \
 	test.c
 

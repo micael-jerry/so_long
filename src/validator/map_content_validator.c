@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 16:04:44 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 17:09:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:36:14 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void	map_content_validator(t_map_data *map_data)
 	if (count_map_obj(map_data, 'C') < 1)
 		return (free_map_data(map_data),
 			put_error("Number of collectible object on the map invalid"));
+	accessibility_check(map_data);
 }

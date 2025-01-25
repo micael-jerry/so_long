@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/24 18:30:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/25 10:56:44 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,18 @@ typedef struct s_map_data
 	int		heigth;
 }			t_map_data;
 
+typedef struct s_map_coordinate
+{
+	int	x;
+	int	y;
+}	t_map_coordinate;
+
 // MAP
 char		**get_matrix_map(int fd);
 void		map_arg_validator(int argc, char const *argv[]);
 void		map_data_validator(t_map_data *map_data);
 void		map_content_validator(t_map_data *map_data);
+void		accessibility_check(t_map_data *map_data);
 
 // ERROR
 void		put_error(char *msg);
@@ -36,6 +43,9 @@ void		put_error(char *msg);
 // UTILS
 void		free_map_data(t_map_data *map_data);
 int			count_map_obj(t_map_data *map_data, char obj);
+t_map_coordinate find_coordinate_obj(char **data, int h, int w, char obj);
+void trans_accessible_to_Y(char **data, int heigth, int width);
+int	have_obj_around(char **data, int x, int y, char c);
 
 // MATRIX
 char		**matrix_char_join(char **matrix, char *new);

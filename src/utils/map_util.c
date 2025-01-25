@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:19:59 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 17:03:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:57:45 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,32 @@ int	count_map_obj(t_map_data *map_data, char obj)
 		i++;
 	}
 	return (count);
+}
+
+t_map_coordinate find_coordinate_obj(char **data, int h, int w, char obj)
+{
+	t_map_coordinate coordinate;
+	int	i;
+	int	j;
+
+	coordinate.x = -1;
+	coordinate.y = -1;
+	i = 0;
+	while (i < h)
+	{
+		j = 0;
+		while (j < w)
+		{
+			if (data[i][j] == obj)
+			{
+				coordinate.x = j;
+				coordinate.y = i;
+				break ;
+			}
+			j++;
+		}
+		
+		i++;
+	}
+	return (coordinate);
 }

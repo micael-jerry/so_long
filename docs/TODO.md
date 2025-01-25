@@ -15,5 +15,5 @@
     - ✅ Comptez simplement combien `P` vous en trouvez sur la carte.
   - ✅ Y a-t-il au moins un objet de collection ?
     - ✅ Comptez simplement combien `C` vous en trouvez sur la carte.
-- La sortie est-elle accessible depuis la position de départ
-- Tous les objets de collection sont-ils accessibles depuis la position de départ.
+- ✅ La sortie est-elle accessible depuis la position de départ
+- ✅ Tous les objets de collection sont-ils accessibles depuis la position de départ.
