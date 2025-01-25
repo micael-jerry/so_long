@@ -43,11 +43,11 @@ int	count_map_obj(t_map_data *map_data, char obj)
 	return (count);
 }
 
-t_map_coordinate find_coordinate_obj(char **data, int h, int w, char obj)
+t_map_coordinate	find_coordinate_obj(char **data, int h, int w, char obj)
 {
-	t_map_coordinate coordinate;
-	int	i;
-	int	j;
+	t_map_coordinate	coordinate;
+	int					i;
+	int					j;
 
 	coordinate.x = -1;
 	coordinate.y = -1;
@@ -65,7 +65,6 @@ t_map_coordinate find_coordinate_obj(char **data, int h, int w, char obj)
 			}
 			j++;
 		}
-		
 		i++;
 	}
 	return (coordinate);

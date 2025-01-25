@@ -43,20 +43,19 @@ char	**matrix_char_join(char **matrix, char *new)
 
 char	**matrix_cpy(char **matrix)
 {
-		int i;
-		char **m_cpy;
-		int matrix_len;
+	int		i;
+	char	**m_cpy;
+	int		matrix_len;
 
-		matrix_len = ft_matrixsize((void **) matrix);
-		m_cpy = (char **) malloc(matrix_len * sizeof(char *));
-		if (!m_cpy)
-			return NULL;
-		i = 0;
-		
-		while (i < matrix_len)
-		{
-			m_cpy[i] = ft_strdup(matrix[i]);
-			i++;
-		}
-		return (m_cpy);
+	matrix_len = ft_matrixsize((void **)matrix);
+	m_cpy = (char **)malloc(matrix_len * sizeof(char *));
+	if (!m_cpy)
+		return (NULL);
+	i = 0;
+	while (i < matrix_len)
+	{
+		m_cpy[i] = ft_strdup(matrix[i]);
+		i++;
+	}
+	return (m_cpy);
 }
