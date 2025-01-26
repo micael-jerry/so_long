@@ -24,7 +24,7 @@
   - Créez la structure requise pour stocker toutes les informations nécessaires
 - Chargez tous les sprites (images) requis pour votre jeu et stockez-les en mémoire
 - Créer les différents crochets
-  - gestionnaire_de_clés
+  - keys_handler
   - mouse_handler (si nécessaire)
   - close_handler, c'est un hook sur la croix rouge qui ferme correctement le programme
   - loop_hook (=> votre boucle de jeu)
