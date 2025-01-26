@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:23:54 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/24 18:34:14 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 09:55:13 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	**matrix_cpy(char **matrix)
 	int		matrix_len;
 
 	matrix_len = ft_matrixsize((void **)matrix);
-	m_cpy = (char **)malloc(matrix_len * sizeof(char *));
+	m_cpy = (char **)malloc((matrix_len + 1) * sizeof(char *));
 	if (!m_cpy)
 		return (NULL);
 	i = 0;
@@ -57,5 +57,6 @@ char	**matrix_cpy(char **matrix)
 		m_cpy[i] = ft_strdup(matrix[i]);
 		i++;
 	}
+	m_cpy[i] = NULL;
 	return (m_cpy);
 }

@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:36:04 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/25 12:43:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 09:53:08 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ void	accessibility_check(t_map_data *map_data)
 			map_data->width))
 		return (free_map_data(map_data), ft_matrixfree((void **)data_cp),
 			put_error("Not all collectors items are accessible"));
+	ft_matrixfree((void **) data_cp);
 }
