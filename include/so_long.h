@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/26 09:50:57 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 10:04:33 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_map_coordinate
 
 typedef struct s_data
 {
+	void	*mlx;
+	void	*mlx_win;
 	t_map_data *map_data;
 }	t_data;
 
