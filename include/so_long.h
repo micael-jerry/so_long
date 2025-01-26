@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/25 12:43:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 07:01:11 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ typedef struct s_map_coordinate
 	int				y;
 }					t_map_coordinate;
 
+typedef struct s_data
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}	t_data;
+
+
 // MAP
 char				**get_matrix_map(int fd);
 void				map_arg_validator(int argc, char const *argv[]);
@@ -50,6 +60,9 @@ int					have_obj_around(char **data, int x, int y, char c);
 // MATRIX
 char				**matrix_char_join(char **matrix, char *new);
 char				**matrix_cpy(char **matrix);
+
+// MLX FUNC
+void put_pixel(t_data *data, int x, int y, int color);
 
 // TEST
 void				print_matrix(char **matrix);

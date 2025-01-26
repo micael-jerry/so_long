@@ -9,6 +9,7 @@ SRC= main.c \
 	validator/map_arg_validator.c validator/map_data_validator.c validator/map_content_validator.c validator/map_accessibility_check.c \
 	utils/map_util.c utils/map_access_validator_util.c \
 	matrix.c map.c \
+	mlx_func.c \
 	test.c
 
 OBJ_DIR= ./obj
