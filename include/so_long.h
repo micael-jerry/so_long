@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/26 07:01:11 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 09:21:43 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct s_data
 
 
 // MAP
-char				**get_matrix_map(int fd);
+t_map_data			*get_map_data(char const *filename);
 void				map_arg_validator(int argc, char const *argv[]);
 void				map_data_validator(t_map_data *map_data);
 void				map_content_validator(t_map_data *map_data);
