@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/26 10:04:33 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/26 17:13:17 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ typedef struct s_data
 {
 	void	*mlx;
 	void	*mlx_win;
+	void	*collectible_obj;
+	void	*player;
+	void	*wall;
+	void	*road;
+	void	*exit;
 	t_map_data *map_data;
 }	t_data;
 
@@ -60,7 +65,7 @@ char				**matrix_char_join(char **matrix, char *new);
 char				**matrix_cpy(char **matrix);
 
 // MLX FUNC
-void put_pixel(t_data *data, int x, int y, int color);
+void	free_data_game(t_data *data);
 
 // TEST
 void				print_matrix(char **matrix);
