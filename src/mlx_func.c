@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 19:25:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/26 17:12:16 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/27 18:43:07 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ void	free_data_game(t_data *data)
 		mlx_destroy_image(data->mlx, data->wall);
 	if (data->road)
 		mlx_destroy_image(data->mlx, data->road);
-	mlx_destroy_window(data->mlx, data->mlx_win);
-	free(data->mlx);
-	free_map_data(data->map_data);
+	if (data->mlx_win)
+		mlx_destroy_window(data->mlx, data->mlx_win);
+	if (data->mlx)
+		free(data->mlx);
+	if (data->map_data)
+		free_map_data(data->map_data);
 }
