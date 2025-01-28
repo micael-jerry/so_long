@@ -6,12 +6,13 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/26 17:13:17 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 05:58:35 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
+#define FRAME_SIZE 32
 
 # include "../lib/ft_printf/include/ft_printf.h"
 # include "../lib/get_next_line/get_next_line.h"

@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/27 18:50:39 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 05:58:01 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ static void	init(t_data *data)
 	int	w;
 	int	h;
 
+	w = FRAME_SIZE ;
+	h = FRAME_SIZE;
 	data->mlx = mlx_init();
-	data->mlx_win = mlx_new_window(data->mlx, 1920, 1080, "so_long");
+	data->mlx_win = mlx_new_window(data->mlx, data->map_data->width * FRAME_SIZE, data->map_data->heigth * FRAME_SIZE, "so_long");
 	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/eggs.xpm", &w, &h);
 	data->wall = mlx_xpm_file_to_image(data->mlx, "assets/water.xpm", &w, &h);
 	data->player = mlx_xpm_file_to_image(data->mlx, "assets/player.xpm", &w, &h);
@@ -39,7 +41,7 @@ int	main(int argc, char const *argv[])
 	map_content_validator(data.map_data);
 
 	init(&data);
-	// mlx_loop(data.mlx);
+	mlx_loop(data.mlx);
 
 	print_matrix(data.map_data->data);
 
