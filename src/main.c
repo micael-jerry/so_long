@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 14:14:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:47:53 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int argc, char const *argv[])
 	map_content_validator(data.map_data);
 
 	init(&data);
+	mlx_hook(data.mlx_win, 17, 0, exit_game, &data);
 	mlx_loop_hook(data.mlx, &game_render, &data);
 	mlx_loop(data.mlx);
 

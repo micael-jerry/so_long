@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 07:26:25 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:48:54 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char				**matrix_cpy(char **matrix);
 // VIEWS
 void	free_data_game(t_data *data);
 int		game_render(t_data *data);
+int	exit_game(t_data *data);
 
 // TEST
 void				print_matrix(char **matrix);

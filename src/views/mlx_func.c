@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 19:25:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 06:23:58 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:48:40 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,11 @@ void	free_data_game(t_data *data)
 		free(data->mlx);
 	if (data->map_data)
 		free_map_data(data->map_data);
+}
+
+int	exit_game(t_data *data)
+{
+	free_data_game(data);
+    exit(0);
+	return (0);
 }
