@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 14:47:53 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 15:55:11 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 static void	init(t_data *data)
 {
+	int		win_width;
+	int    win_height;
 	int	w;
 	int	h;
 
+	win_width = data->map_data->width * FRAME_SIZE;
+	win_height = data->map_data->heigth * FRAME_SIZE;
 	w = FRAME_SIZE;
 	h = FRAME_SIZE;
 	data->mlx = mlx_init();
-	data->mlx_win = mlx_new_window(data->mlx, data->map_data->width * FRAME_SIZE, data->map_data->heigth * FRAME_SIZE, "so_long");
+	data->mlx_win = mlx_new_window(data->mlx, win_width , win_height, "so_long");
 	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/eggs.xpm", &w, &h);
 	data->wall = mlx_xpm_file_to_image(data->mlx, "assets/water.xpm", &w, &h);
 	data->player = mlx_xpm_file_to_image(data->mlx, "assets/player.xpm", &w, &h);
@@ -44,8 +48,6 @@ int	main(int argc, char const *argv[])
 	mlx_hook(data.mlx_win, 17, 0, exit_game, &data);
 	mlx_loop_hook(data.mlx, &game_render, &data);
 	mlx_loop(data.mlx);
-
-	print_matrix(data.map_data->data);
 
 	return (free_data_game(&data), 0);
 }
