@@ -8,8 +8,8 @@ SRC= main.c \
 	error/put_error.c \
 	validator/map_arg_validator.c validator/map_data_validator.c validator/map_content_validator.c validator/map_accessibility_check.c \
 	utils/map_util.c utils/map_access_validator_util.c \
+	views/mlx_func.c views/game_render.c \
 	matrix.c map.c \
-	mlx_func.c \
 	test.c
 
 OBJ_DIR= ./obj
@@ -28,7 +28,7 @@ all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
-	mkdir -p $(OBJ_DIR)/error $(OBJ_DIR)/validator $(OBJ_DIR)/utils
+	mkdir -p $(OBJ_DIR)/error $(OBJ_DIR)/validator $(OBJ_DIR)/utils $(OBJ_DIR)/views
 	$(CC) $(FLAGS) -I $(INCLUDE) -o $@ -c $<
 
 $(LIBFT_PRINTF_DIR)/$(LIBFT_PRINTF):

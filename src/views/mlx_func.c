@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 19:25:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 05:55:54 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 06:23:58 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void	free_data_game(t_data *data)
 	if (data->map_data)
 		free_map_data(data->map_data);
 }
-
