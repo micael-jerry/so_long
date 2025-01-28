@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 18:29:32 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 20:57:35 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_data
 	void	*road;
 	void	*exit;
 	t_map_data *map_data;
+	int		player_move;
 }	t_data;
 
 

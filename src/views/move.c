@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 16:28:28 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 20:52:02 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 21:04:20 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void move_player(t_action_key_code action, t_map_coordinate p_coord, t_data *dat
 			data->map_data->data[next_p_coord.y][next_p_coord.x] = 'P';
             data->map_data->data[p_coord.y][p_coord.x] = '0';
 		}
+		data->player_move++;
+		ft_printf("Move: %d\n", data->player_move);
 	}
 }
 
