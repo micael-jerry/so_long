@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 14:48:54 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:37:05 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,15 @@ typedef struct s_data
 	t_map_data *map_data;
 }	t_data;
 
+
+typedef enum e_action_key_code {
+	QUIT = 65307,
+	MOVE_UP = 119,
+    MOVE_DOWN = 115,
+    MOVE_LEFT = 97,
+    MOVE_RIGHT = 100
+} t_action_key_code;
+
 // MAP
 t_map_data			*get_map_data(char const *filename);
 void				map_arg_validator(int argc, char const *argv[]);
@@ -67,7 +76,8 @@ char				**matrix_cpy(char **matrix);
 // VIEWS
 void	free_data_game(t_data *data);
 int		game_render(t_data *data);
-int	exit_game(t_data *data);
+int		exit_game(t_data *data);
+int		key_handler(int keycode, t_data *data);
 
 // TEST
 void				print_matrix(char **matrix);
