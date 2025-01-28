@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 17:37:05 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 18:29:32 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ typedef struct s_data
 
 typedef enum e_action_key_code {
 	QUIT = 65307,
-	MOVE_UP = 119,
-    MOVE_DOWN = 115,
+	MOVE_UP = 115,
+    MOVE_DOWN = 119,
     MOVE_LEFT = 97,
     MOVE_RIGHT = 100
 } t_action_key_code;

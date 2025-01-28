@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 17:56:00 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/28 18:27:28 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char const *argv[])
 
 	game_render(&data);
 	mlx_hook(data.mlx_win, 17, 0, exit_game, &data);
-	mlx_key_hook(data.mlx, key_handler, &data);
+	mlx_key_hook(data.mlx_win, key_handler, &data);
 	mlx_loop(data.mlx);
 
 	return (free_data_game(&data), 0);
