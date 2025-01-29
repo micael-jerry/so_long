@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 16:28:28 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/29 07:41:36 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 08:03:51 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	action(t_action_key_code action, t_data *data)
 		data->player_move++;
 		ft_printf("Move: %d\n", data->player_move);
 	}
+	if (is_end_of_game(data))
+		return (exit_game(data), 0);
 	game_render(data);
 	return (0);
 }

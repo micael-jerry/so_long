@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/29 07:43:44 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 08:03:34 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,12 @@ int					update_map_frame(t_map_coordinate coord, char new,
 						t_map_data *map_data);
 int					is_valid_move(t_map_coordinate new_p_coord, t_data *data);
 
-// VIEWS
+// GAME
 void				free_data_game(t_data *data);
 int					game_render(t_data *data);
 int					exit_game(t_data *data);
 int					key_handler(int keycode, t_data *data);
+int					is_end_of_game(t_data *data);
 
 // TEST
 void				print_matrix(char **matrix);
