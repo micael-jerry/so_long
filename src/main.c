@@ -14,8 +14,8 @@
 
 static void	init(t_data *data)
 {
-	int		win_width;
-	int    win_height;
+	int	win_width;
+	int	win_height;
 	int	w;
 	int	h;
 
@@ -24,33 +24,32 @@ static void	init(t_data *data)
 	w = FRAME_SIZE;
 	h = FRAME_SIZE;
 	data->mlx = mlx_init();
-	data->mlx_win = mlx_new_window(data->mlx, win_width , win_height, "so_long");
-	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/eggs.xpm", &w, &h);
+	data->mlx_win = mlx_new_window(data->mlx, win_width, win_height, "so_long");
+	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/eggs.xpm",
+			&w, &h);
 	data->wall = mlx_xpm_file_to_image(data->mlx, "assets/water.xpm", &w, &h);
-	data->player = mlx_xpm_file_to_image(data->mlx, "assets/player.xpm", &w, &h);
+	data->player = mlx_xpm_file_to_image(data->mlx, "assets/player.xpm", &w,
+			&h);
 	data->exit = mlx_xpm_file_to_image(data->mlx, "assets/house.xpm", &w, &h);
 	data->road = mlx_xpm_file_to_image(data->mlx, "assets/path.xpm", &w, &h);
 	data->player_move = 0;
-
-	if (!data->collectible_obj || !data->wall || !data->player || !data->road || !data->exit)
+	if (!data->collectible_obj || !data->wall || !data->player || !data->road
+		|| !data->exit)
 		return (free_data_game(data), put_error("Error during image change"));
 }
 
 int	main(int argc, char const *argv[])
 {
-	t_data data;
+	t_data	data;
 
 	map_arg_validator(argc, argv);
 	data.map_data = get_map_data(argv[1]);
 	map_data_validator(data.map_data);
 	map_content_validator(data.map_data);
-
 	init(&data);
-
 	game_render(&data);
 	mlx_hook(data.mlx_win, 17, 0, exit_game, &data);
 	mlx_key_hook(data.mlx_win, key_handler, &data);
 	mlx_loop(data.mlx);
-
 	return (free_data_game(&data), 0);
 }

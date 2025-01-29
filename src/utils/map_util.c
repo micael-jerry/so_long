@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:19:59 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/24 18:57:45 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 07:33:10 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,13 @@ t_map_coordinate	find_coordinate_obj(char **data, int h, int w, char obj)
 		i++;
 	}
 	return (coordinate);
+}
+
+int	update_map_frame(t_map_coordinate coord, char new, t_map_data *map_data)
+{
+	if (coord.x < 0 || coord.x >= map_data->width || coord.y < 0
+		|| coord.y >= map_data->heigth)
+		return (1);
+	map_data->data[coord.y][coord.x] = new;
+	return (0);
 }

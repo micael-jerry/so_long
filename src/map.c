@@ -41,7 +41,7 @@ static char	**get_matrix_map(int fd)
 
 t_map_data	*get_map_data(char const *filename)
 {
-	int fd;
+	int			fd;
 	t_map_data	*map_data;
 
 	fd = get_fd_map(filename);

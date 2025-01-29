@@ -38,6 +38,6 @@ void	free_data_game(t_data *data)
 int	exit_game(t_data *data)
 {
 	free_data_game(data);
-    exit(0);
+	exit(0);
 	return (0);
 }
