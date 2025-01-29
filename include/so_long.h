@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:35:10 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/29 07:32:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 07:43:44 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,10 @@ typedef enum e_action_key_code
 	MOVE_RIGHT = 100
 }					t_action_key_code;
 
+// MATRIX
+char				**matrix_char_join(char **matrix, char *new);
+char				**matrix_cpy(char **matrix);
+
 // MAP
 t_map_data			*get_map_data(char const *filename);
 void				map_arg_validator(int argc, char const *argv[]);
@@ -69,11 +73,11 @@ int					count_map_obj(t_map_data *map_data, char obj);
 t_map_coordinate	find_coordinate_obj(char **data, int h, int w, char obj);
 void				trans_accessible_to_y(char **data, int heigth, int width);
 int					have_obj_around(char **data, int x, int y, char c);
-int					update_map_frame(t_map_coordinate coord, char new, t_map_data *map_data);
 
-// MATRIX
-char				**matrix_char_join(char **matrix, char *new);
-char				**matrix_cpy(char **matrix);
+// MOVE
+int					update_map_frame(t_map_coordinate coord, char new,
+						t_map_data *map_data);
+int					is_valid_move(t_map_coordinate new_p_coord, t_data *data);
 
 // VIEWS
 void				free_data_game(t_data *data);

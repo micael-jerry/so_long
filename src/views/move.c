@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 16:28:28 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/29 07:37:58 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 07:41:36 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,6 @@ t_map_coordinate	find_next_coordinate(t_action_key_code action,
 	else if (action == MOVE_RIGHT)
 		new_coord.x += 1;
 	return (new_coord);
-}
-
-int	is_valid_move(t_map_coordinate new_p_coord, t_data *data)
-{
-	if (data->map_data->data[new_p_coord.y][new_p_coord.x] == '0')
-		return (1);
-	if (data->map_data->data[new_p_coord.y][new_p_coord.x] == 'C')
-		return (1);
-	if (data->map_data->data[new_p_coord.y][new_p_coord.x] == 'E')
-		return (1);
-	if (data->map_data->data[new_p_coord.y][new_p_coord.x] == 'T')
-		return (1);
-	return (0);
 }
 
 int	move_player(t_action_key_code action, t_map_coordinate p_coord,
