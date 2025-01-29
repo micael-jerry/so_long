@@ -7,8 +7,8 @@ SRC_DIR=./src
 SRC= main.c \
 	error/put_error.c \
 	validator/map_arg_validator.c validator/map_data_validator.c validator/map_content_validator.c validator/map_accessibility_check.c validator/move_validator.c \
-	utils/map_util.c utils/map_access_validator_util.c \
-	views/mlx_func.c views/game_render.c views/move.c \
+	utils/map_util.c utils/map_access_validator_util.c utils/view_util.c \
+	views/game_render.c views/move.c \
 	matrix.c map.c \
 	test.c
 
