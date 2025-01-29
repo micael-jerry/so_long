@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:23:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/28 21:02:06 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 08:52:23 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	init(t_data *data)
 	h = FRAME_SIZE;
 	data->mlx = mlx_init();
 	data->mlx_win = mlx_new_window(data->mlx, win_width, win_height, "so_long");
-	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/eggs.xpm",
+	data->collectible_obj = mlx_xpm_file_to_image(data->mlx, "assets/collectible_obj.xpm",
 			&w, &h);
 	data->wall = mlx_xpm_file_to_image(data->mlx, "assets/water.xpm", &w, &h);
 	data->player = mlx_xpm_file_to_image(data->mlx, "assets/player.xpm", &w,
