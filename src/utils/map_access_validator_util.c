@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 10:33:23 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/25 12:44:13 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:33:11 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,14 @@ static int	is_valid_to_trans(char c)
 
 static void	transform_around_to_z(char **data, int x, int y)
 {
-	if (is_valid_to_trans(data[y - 1][x - 1]))
-		data[y - 1][x - 1] = 'Z';
 	if (is_valid_to_trans(data[y - 1][x]))
 		data[y - 1][x] = 'Z';
-	if (is_valid_to_trans(data[y - 1][x + 1]))
-		data[y - 1][x + 1] = 'Z';
 	if (is_valid_to_trans(data[y][x - 1]))
 		data[y][x - 1] = 'Z';
 	if (is_valid_to_trans(data[y][x + 1]))
 		data[y][x + 1] = 'Z';
-	if (is_valid_to_trans(data[y + 1][x - 1]))
-		data[y + 1][x - 1] = 'Z';
 	if (is_valid_to_trans(data[y + 1][x]))
 		data[y + 1][x] = 'Z';
-	if (is_valid_to_trans(data[y + 1][x + 1]))
-		data[y + 1][x + 1] = 'Z';
 }
 
 void	trans_accessible_to_y(char **data, int heigth, int width)
