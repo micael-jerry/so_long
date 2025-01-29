@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 16:04:44 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/29 13:04:11 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:06:59 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ static int		is_content_other_char(t_map_data *map_data)
 	return (0);
 }
 
+// TODO: verifier l'accessibiliter des collectible
 void	map_content_validator(t_map_data *map_data)
 {
 	if (!is_valid_wall(map_data))
