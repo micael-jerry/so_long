@@ -35,10 +35,10 @@ static int	is_valid_wall(t_map_data *map_data)
 	return (1);
 }
 
-static int		is_content_other_char(t_map_data *map_data)
+static int	is_content_other_char(t_map_data *map_data)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < map_data->heigth)
@@ -46,7 +46,9 @@ static int		is_content_other_char(t_map_data *map_data)
 		j = 0;
 		while (j < map_data->width)
 		{
-			if (map_data->data[i][j] != '1' && map_data->data[i][j] != '0' && map_data->data[i][j] != 'P' && map_data->data[i][j] != 'C' && map_data->data[i][j] != 'E')
+			if (map_data->data[i][j] != '1' && map_data->data[i][j] != '0'
+				&& map_data->data[i][j] != 'P' && map_data->data[i][j] != 'C'
+				&& map_data->data[i][j] != 'E')
 				return (1);
 			j++;
 		}
@@ -71,7 +73,6 @@ void	map_content_validator(t_map_data *map_data)
 		return (free_map_data(map_data),
 			put_error("Number of collectible object on the map invalid"));
 	if (is_content_other_char(map_data))
-		return (free_map_data(map_data),
-			put_error("Contains another value"));
+		return (free_map_data(map_data), put_error("Contains another value"));
 	accessibility_check(map_data);
 }

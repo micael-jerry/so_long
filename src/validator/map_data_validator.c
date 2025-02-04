@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 09:21:34 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/01/22 11:26:07 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:37:17 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_rectangle(t_map_data *map_data)
 {
-	if (map_data->heigth >= map_data->width)
+	if (map_data->heigth == map_data->width)
 		return (0);
 	return (1);
 }
